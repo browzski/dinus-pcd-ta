@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # User Defined Config
-    "web.apps.WebConfig"
+    "web.apps.WebConfig",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +70,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                "utils": "web.templatetags.utils"
+            }
         },
+        
     },
 ]
 

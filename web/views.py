@@ -1,5 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+
+
 def index(request):
-    return render(request,"index.html")
+    data = {
+        "active" : "index"
+    }
+    return render(request,"index.html",data)
+
+def getLink(request):
+    data = {
+        "active" : "link"
+    }
+    return render(request,"upload_link.html",data)
